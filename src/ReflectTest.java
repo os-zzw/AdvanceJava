@@ -19,6 +19,7 @@ public class ReflectTest {
 //        sendParamter();
         arrayReflect();
 
+
     }
 
     private static void arrayReflect() {
