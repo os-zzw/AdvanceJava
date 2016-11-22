@@ -8,6 +8,7 @@ public class EnumTest {
         System.out.println(sun);
         System.out.println(sun.ordinal());
         System.out.println(WeekDay.values().length);
+
     }
 
     public enum WeekDay {
