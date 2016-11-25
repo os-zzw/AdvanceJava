@@ -1,3 +1,5 @@
+package reflect;
+
 import java.lang.reflect.*;
 import java.util.Arrays;
 
@@ -13,7 +15,7 @@ public class ReflectTest {
 //        changeFieldTest();
 //        invokeMethod();
 
-//        TestArgument.main(new String[]{"123", "222"});
+//        reflect.TestArgument.main(new String[]{"123", "222"});
 
 //        String startingClassName = args[0];
 //        sendParamter();
@@ -49,10 +51,10 @@ public class ReflectTest {
     }
 
     private static void sendParater() throws ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InvocationTargetException {
-        Class.forName("TestArgument");
+        Class.forName("reflect.TestArgument");
 
 
-        String startingClassName = "TestArgument";
+        String startingClassName = "reflect.TestArgument";
         Method main = Class.forName(startingClassName).getMethod("main", String[].class);
         main.invoke(null, (Object) new String[]{"123", "444"});//我给你的是一个对象,不是数组别拆包
     }
