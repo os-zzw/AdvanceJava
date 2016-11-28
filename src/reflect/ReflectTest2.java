@@ -13,9 +13,9 @@ public class ReflectTest2 {
 //        CollectonsHasCode();
 
 //        FileInputStream inputStream = new FileInputStream("config.properties");
-//        InputStream inputStream = reflect.ReflectTest2.class.getClassLoader().getResourceAsStream("config.properties");
+        InputStream inputStream = ReflectTest2.class.getClassLoader().getResourceAsStream("config.properties");
 
-        InputStream inputStream = ReflectTest2.class.getResourceAsStream("config.properties");
+//        InputStream inputStream = ReflectTest2.class.getResourceAsStream("config.properties");
 
         Properties properties = new Properties();
         properties.load(inputStream);

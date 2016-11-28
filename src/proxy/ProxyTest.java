@@ -1,5 +1,9 @@
 package proxy;
 
+import proxy.aopFramework.BeanFactory;
+import proxy.aopFramework.TargetInter;
+
+import java.io.InputStream;
 import java.lang.reflect.*;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -10,8 +14,19 @@ import java.util.List;
  * 动态代理,用来实现aop编程  面向切面编程,实现事务性
  */
 public class ProxyTest {
-    public static void main(String[] args) throws IllegalAccessException, InvocationTargetException, InstantiationException, NoSuchMethodException {
+    public static void main(String[] args) throws Exception {
+//        firstTest();
 
+//      InputStream inputStream =  proxy.ProxyTest.class.getClassLoader().getResourceAsStream("config.properties");
+        InputStream inputStream = ProxyTest.class.getClassLoader().getResourceAsStream("config.properties");
+
+        BeanFactory beanFactory = new BeanFactory(inputStream);
+        //在这里只能转换成接口,不能直接转化成为类
+        TargetInter list = (TargetInter) beanFactory.getBean("factory");
+        list.Print();
+    }
+
+    private static void firstTest() throws NoSuchMethodException, InstantiationException, IllegalAccessException, InvocationTargetException {
         //三种方式创建动态类
         Class<?> clazzProxy1 = Proxy.getProxyClass(Collection.class.getClassLoader(), Collection.class);
         String clazzProxy1Name = clazzProxy1.getName();
@@ -55,7 +70,6 @@ public class ProxyTest {
         instance2.add("asd");
 
         System.out.println(instance2);
-
     }
 
     private static Object getProxy(final Object target) {
