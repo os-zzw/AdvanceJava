@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 /**
  * Created by john on 2016/11/22.
- * 反射
+ * 反射  用来实现Ioc  控制反转和依赖注入
  */
 public class ReflectTest {
     public static void main(String[] args) throws Exception {
