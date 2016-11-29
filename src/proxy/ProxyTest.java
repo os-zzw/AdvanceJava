@@ -1,7 +1,7 @@
 package proxy;
 
-import proxy.aopFramework.BeanFactory;
-import proxy.aopFramework.TargetInter;
+import proxy.aopframework.BeanFactory;
+import proxy.aopframework.TargetInter;
 
 import java.io.InputStream;
 import java.lang.reflect.*;
