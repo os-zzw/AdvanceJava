@@ -7,5 +7,6 @@ package mutithread;
 public class TraditionalCommunication {
     public static void main(String[] args) {
 
+
     }
 }
