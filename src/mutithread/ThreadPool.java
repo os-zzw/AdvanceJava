@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * Created by john(Zhewei) on 2016/12/1.
- * 线程池
+ * 线程池中固定线程 以及 线程池中的定时器
  */
 public class ThreadPool {
     public static void main(String[] args) {
