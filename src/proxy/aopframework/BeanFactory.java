@@ -18,6 +18,7 @@ public class BeanFactory {
         }
     }
 
+
     public Object getBean(String name) throws Exception {
         String clazzName = properties.getProperty(name);
         Object bean;

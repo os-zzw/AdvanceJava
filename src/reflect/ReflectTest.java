@@ -9,16 +9,19 @@ import java.util.Arrays;
  */
 public class ReflectTest {
     public static void main(String[] args) throws Exception {
-//        basic();
-//        constructorC();
-//        Field();
-//        changeFieldTest();
-//        invokeMethod();
+        //能通过三种方式拿到类对象
+        basic();
+        //能拿到某个类对象的构造方法
+        constructorC();
+        //能拿到某个类的属性
+        Field();
+        changeFieldTest();
+        //通过反射执行方法
+        invokeMethod();
 
-//        reflect.TestArgument.main(new String[]{"123", "222"});
+        reflect.TestArgument.main(new String[]{"123", "222"});
 
-//        String startingClassName = args[0];
-//        sendParamter();
+        String startingClassName = args[0];
         arrayReflect();
 
     }

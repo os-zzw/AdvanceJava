@@ -1,13 +1,17 @@
 package proxy;
 
-import proxy.aopframework.BeanFactory;
-import proxy.aopframework.TargetInter;
-
 import java.io.InputStream;
-import java.lang.reflect.*;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.lang.reflect.Proxy;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+
+import proxy.aopframework.BeanFactory;
+import proxy.aopframework.TargetInter;
 
 /**
  * Created by john on 2016/11/27.
@@ -28,7 +32,8 @@ public class ProxyTest {
 
     private static void firstTest() throws NoSuchMethodException, InstantiationException, IllegalAccessException, InvocationTargetException {
         //三种方式创建动态类
-        Class<?> clazzProxy1 = Proxy.getProxyClass(Collection.class.getClassLoader(), Collection.class);
+        Class<?> clazzProxy1 = Proxy.getProxyClass(Collection.class.getClassLoader(),
+                Collection.class);
         String clazzProxy1Name = clazzProxy1.getName();
         System.out.println(clazzProxy1);
         Constructor<?>[] constructors = clazzProxy1.getConstructors();
