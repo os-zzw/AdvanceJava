@@ -16,6 +16,5 @@ public class SubjectImpl extends Observable {
         setChanged();
         //通知所有的观察者
         notifyObservers(content);
-
     }
 }

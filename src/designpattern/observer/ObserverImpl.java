@@ -21,8 +21,7 @@ public class ObserverImpl implements Observer {
      */
     @Override
     public void update(Observable o, Object arg) {
-        System.out.println(name + "更新了!");
-        System.out.println(name + "内容是:" + arg.toString());
+        System.out.println("收到了"+o.getClass().getName()+"内容是:" + arg.toString());
     }
 
 }
